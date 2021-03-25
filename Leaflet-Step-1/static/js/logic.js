@@ -78,7 +78,7 @@ var legend = L.control({
 
 legend.onAdd = function () {
     var div = L
-        .DomUtil
+        .DomUti
         .create("div", "info legend");
     var grades = [0,1,2,3,4,5];
     var color = ["#98ee00", "#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"];
