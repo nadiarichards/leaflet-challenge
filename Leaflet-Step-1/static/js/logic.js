@@ -21,7 +21,7 @@ d3.json(earthquakes, function(response) {
         return {
             opacity: 1,
             fillOpacity: 1,
-            fillColor: getColor(feature.properties.mag),
+            fillColor: getColor(feature.geometry.coordinates[2]),
             color: "#000000",
             radius: getRadius(feature.properties.mag),
             stroke: true,
@@ -29,17 +29,17 @@ d3.json(earthquakes, function(response) {
         };
     }
 
-    function getColor(magnitude) {
+    function getColor(depth) {
         switch (true) {
-            case magnitude > 5:
+            case depth > 90:
                 return "#ea2c2c";
-            case magnitude > 4:
+            case depth > 70:
                 return "#ea822c";
-            case magnitude > 3:
+            case depth > 50:
                 return "#ee9c00";
-            case magnitude > 2:
+            case depth > 30:
                 return "#eecc00";
-            case magnitude > 1:
+            case depth > 10:
                 return "#d4ee00";
             default: 
                 return "#98ee00";
@@ -64,17 +64,17 @@ d3.json(earthquakes, function(response) {
     }).addTo(map)
 });
 
-function getColor(magnitude) {
+function getColor(depth) {
     switch (true) {
-        case magnitude > 5:
+        case depth > 90:
             return "#ea2c2c";
-        case magnitude > 4:
+        case depth > 70:
             return "#ea822c";
-        case magnitude > 3:
+        case depth > 50:
             return "#ee9c00";
-        case magnitude > 2:
+        case depth > 30:
             return "#eecc00";
-        case magnitude > 1:
+        case depth > 10:
             return "#d4ee00";
         default: 
             return "#98ee00";
@@ -89,7 +89,7 @@ legend.onAdd = function (map) {
     var div = L
         .DomUtil
         .create("div", "info legend"),
-        grades = [0,1,2,3,4,5],
+        grades = [0,10,30,50,70,90],
     // var color = ["#98ee00", "#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"],
         labels = [],
         from, to;
@@ -99,7 +99,7 @@ legend.onAdd = function (map) {
         to = grades[i + 1];
 
         labels.push(
-            '<i style="background:' + getColor(from + 1) + '">[color]</i> ' +
+            '<i style="background:' + getColor(from + 1) + '">[  ]</i> ' +
             from + (to ? '&ndash;' + to : '+'));
     }
   
