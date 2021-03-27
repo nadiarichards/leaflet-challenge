@@ -88,29 +88,23 @@ var legend = L.control({
 legend.onAdd = function (map) {
     var div = L
         .DomUtil
-        .create("div", "info legend");
-    var grades = [0,1,2,3,4,5];
-    var color = ["#98ee00", "#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"];
-    labels = [];
-    from, to;
+        .create("div", "info legend"),
+        grades = [0,1,2,3,4,5],
+    // var color = ["#98ee00", "#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"],
+        labels = [],
+        from, to;
 
     for (var i = 0; i < grades.length; i++) {
         from = grades[i];
         to = grades[i + 1];
 
         labels.push(
-            '<i style="background:' + getColor(from /*+ 1*/) + '">[color]</i> ' +
+            '<i style="background:' + getColor(from + 1) + '">[color]</i> ' +
             from + (to ? '&ndash;' + to : '+'));
-        }
+    }
   
-        div.innerHTML = labels.join('<br>');
-        return div;
-    };
-
-//         div.innerHTML += "<i style='background: " + color[i] + "'></i> " +
-//           grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
-//     }
-//     return div;
-// };
+    div.innerHTML = labels.join('<br>');
+    return div;
+};
 
 legend.addTo(map);
