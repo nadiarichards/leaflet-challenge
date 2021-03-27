@@ -62,14 +62,6 @@ d3.json(earthquakes, function(response) {
             layer.bindPopup("Magnitude:" + feature.properties.mag + "<br> Location:" + feature.properties.place);
         }
     }).addTo(map)
-
-    // for (var i = 0; i < response.length; i++) {
-    //     var location = response[i].location;
-    
-    //     if (location) {
-    //       L.marker([location.coordinates[1], location.coordinates[0]]).addTo(myMap);
-    //     }
-    //   }
 });
 
 var legend = L.control({
