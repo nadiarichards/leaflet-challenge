@@ -64,6 +64,23 @@ d3.json(earthquakes, function(response) {
     }).addTo(map)
 });
 
+function getColor(magnitude) {
+    switch (true) {
+        case magnitude > 5:
+            return "#ea2c2c";
+        case magnitude > 4:
+            return "#ea822c";
+        case magnitude > 3:
+            return "#ee9c00";
+        case magnitude > 2:
+            return "#eecc00";
+        case magnitude > 1:
+            return "#d4ee00";
+        default: 
+            return "#98ee00";
+    }
+}
+
 var legend = L.control({
     position: "bottomright"
 });
