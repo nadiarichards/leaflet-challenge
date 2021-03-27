@@ -98,10 +98,19 @@ legend.onAdd = function (map) {
         from = grades[i];
         to = grades[i + 1];
 
-        div.innerHTML += "<i style='background: " + color[i] + "'></i> " +
-          grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
-    }
-    return div;
-};
+        labels.push(
+            '<i style="background:' + getColor(from /*+ 1*/) + '">[color]</i> ' +
+            from + (to ? '&ndash;' + to : '+'));
+        }
+  
+        div.innerHTML = labels.join('<br>');
+        return div;
+    };
+
+//         div.innerHTML += "<i style='background: " + color[i] + "'></i> " +
+//           grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
+//     }
+//     return div;
+// };
 
 legend.addTo(map);
