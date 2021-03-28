@@ -99,7 +99,7 @@ legend.onAdd = function (map) {
         to = grades[i + 1];
 
         labels.push(
-            '<i style="background:' + getColor(from + 1) + '">[  ]</i> ' +
+            '<i style="background:' + getColor(from + 1) + '"></i> ' +
             from + (to ? '&ndash;' + to : '+'));
     }
   
