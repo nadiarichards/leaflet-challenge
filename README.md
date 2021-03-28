@@ -20,9 +20,11 @@ Please see the screenshots below.
 
 ### Website Screenshots:
 
-1. Scatterplot with state abbreviations in eash dot:
-<img src="https://github.com/nadiarichards/D3-challenge/blob/main/D3_data_journalism/images/D3_with_labels.png" width="600" height="450">
+1. Earthquakes on the map of North America:
+<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/US_map.png" width="600" height="450">
 
-2. Scatterplot with tooltips corresponding to the plotted data:
-<img src="https://github.com/nadiarichards/D3-challenge/blob/main/D3_data_journalism/images/D3_with_tooltips.png" width="600" height="450">
-https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+2. Earthquakes on the map of the world:
+<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/world_map.png" width="600" height="450">
+
+3. Earthquakes visualization with tooltips:
+<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/world_map_tooltips.png" width="600" height="450">
