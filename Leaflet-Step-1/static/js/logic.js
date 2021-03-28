@@ -90,7 +90,6 @@ legend.onAdd = function (map) {
         .DomUtil
         .create("div", "info legend"),
         grades = [0,10,30,50,70,90],
-    // var color = ["#98ee00", "#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"],
         labels = [],
         from, to;
 
