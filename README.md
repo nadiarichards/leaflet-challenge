@@ -21,10 +21,10 @@ Please see the screenshots below.
 ### Website Screenshots:
 
 1. Earthquakes on the map of North America:
-<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/US_map.png" width="600" height="450">
+<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/US_map.png" width="850" height="450">
 
 2. Earthquakes on the map of the world:
-<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/world_map.png" width="600" height="450">
+<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/world_map.png" width="850" height="450">
 
 3. Earthquakes visualization with tooltips:
-<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/world_map_tooltips.png" width="600" height="450">
+<img src="https://github.com/nadiarichards/leaflet-challenge/blob/main/images/world_map_tooltips.png" width="850" height="450">
